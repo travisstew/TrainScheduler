@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Scheduler</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Train Schedule</h1>
+          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+      </div>
+<div class="container">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Train Name</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Frequency(min)</th>
+              <th scope="col">Next Arrival</th>
+              <th scope="col">Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            
+          </tbody>
+        </table>
+
+        <form id="form">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Train Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Train Name">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Destination</label>
+              <input type="text" class="form-control" id="destination" placeholder="Destination">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">First Train Time(HH:mm - military time)</label>
+              <input type="text" class="form-control" id="first-train" placeholder="Strat Time">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Frequency</label>
+              <input type="text" class="form-control" id="frequency" placeholder="Frequency">
+            </div>
+            <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+          </form>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+  
+  
+  <script>
+    // Your web app's Firebase configuration
+
+    var config = {
+      apiKey: "AIzaSyCEJ7CUktf9hOC7bQzeT7TS3IvqXHRH6xQ",
+      authDomain: "fir-2-c3288.firebaseapp.com",
+      databaseURL: "https://fir-2-c3288.firebaseio.com",
+      projectId: "fir-2-c3288",
+      storageBucket: "fir-2-c3288.appspot.com",
+      messagingSenderId: "910822303195",
+      appId: "1:910822303195:web:88200b7ff769d51042f3fe"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(config);
+    
+  </script>
+  <script src="assets/JS/app.js"></script>
+</body>
+</html>

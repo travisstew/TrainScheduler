@@ -1,0 +1,32 @@
+/* tr:nth-child(even){
+  background: rgba(190, 190, 190, 0.986);
+}
+tr:nth-child(odd){
+  background: black;
+  color: white;
+} */
+/* .container{
+  background: black;
+} */
+tr{
+  color: white;
+  background: black
+}
+body{
+  background-image:url(../images/empty-train-station-black-white.jpg)
+}
+form{
+  margin-top: 100px;
+  color:white;
+}
+#form{
+  width: 30%;
+}
+.jumbotron{
+  background: rgb(126, 125, 125);
+  color: white;
+  border-bottom: solid thick white;
+}
+*{
+  font-family: 'Merriweather', serif;
+}

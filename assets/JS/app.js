@@ -1,16 +1,12 @@
   var fire = firebase.database();
 
- 
-
-  
-
   $('#submit').on('click', function(e){
     e.preventDefault();
-    var name = $('#name').val();
-    var dest = $('#destination').val();
-    var firstTrain = $('#first-train').val();
-    var frequency = $('#frequency').val();
-    
+    var name = $('#name').val().trim();
+    var dest = $('#destination').val().trim();
+    var firstTrain = $('#first-train').val().trim();
+    var frequency = $('#frequency').val().trim();
+
 
     fire.ref().push({
       Name: name,
@@ -24,18 +20,6 @@
 
 fire.ref().on('child_added', function(e){
   
-  // $('tbody').append(
-  //   `<tr>
-  //     <td>${e.val().Name}</td>
-  //     <td>${e.val().Destination}</td>
-  //     <td>${e.val().Frequency}</td>
-
-  //     <td>${e.val().First_Train}</td>
-
-  //     <td>${e.val().Frequency}</td>
-  //  </tr>`
-
-  // );
   var startTime = e.val().First_Train;
    var freq = parseInt(e.val().Frequency);
    var timeNow = moment();
@@ -88,9 +72,5 @@ fire.ref().on('child_added', function(e){
 
    console.log(moment(e.val().First_Train,"hh:mm"));
    console.log( parseInt(e.val().Frequency));
-
-
-  
-   
 
   });
